@@ -425,7 +425,7 @@ namespace System.Collections.Generic
             }
 
             int count;
-            if (elements is ICollection<(TElement Element, TPriority Priority)> collection &&
+            if (elements is ICollection<TElement> collection &&
                 (count = collection.Count) > _nodes.Length - _size)
             {
                 Grow(_size + count);
